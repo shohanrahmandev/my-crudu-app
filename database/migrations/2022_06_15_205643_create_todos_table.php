@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('roll');
+            $table->string('reg');
+            $table->string('dept');
+            $table->string('session');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
